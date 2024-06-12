@@ -16,26 +16,6 @@ NBAStats = SHEET.worksheet('NBAStats')
 
 all_stats = NBAStats.get_all_values()
 
-# row_1 = NBAStats.row_values(1)
-# row_2 = NBAStats.row_values(2)
-# row_3 = NBAStats.row_values(3)
-# row_4 = NBAStats.row_values(4)
-# row_5 = NBAStats.row_values(5)
-# row_6 = NBAStats.row_values(6)
-# row_7 = NBAStats.row_values(7)
-# row_8 = NBAStats.row_values(8)
-# row_9 = NBAStats.row_values(9)
-# row_10 = NBAStats.row_values(10)
-# row_11 = NBAStats.row_values(11)
-# row_12 = NBAStats.row_values(12)
-# row_13 = NBAStats.row_values(13)
-# row_14 = NBAStats.row_values(14)
-# row_15 = NBAStats.row_values(15)
-# row_16 = NBAStats.row_values(16)
-# row_17 = NBAStats.row_values(17)
-# row_18 = NBAStats.row_values(18)
-# row_19 = NBAStats.row_values(19)
-# row_20 = NBAStats.row_values(20)
 
 def update_NBAStats_sheet(stats):
     number = len(all_stats) + 1
@@ -45,15 +25,12 @@ def update_NBAStats_sheet(stats):
     print("Player Stats added successfully!")
 
 
-
 def start_menu():
     print('Welcome to this NBA Hall Of Fame Statistics, where you can action the following: \n')
     print('1. View a list of 20 Hall Of Fame Players and their career total stats \n')
     print('2. View an invidual players career stats \n')
     print("3. Add a Hall of Famer's stats into the list \n")
     print('4. Exit \n')
-    print(all_stats)
-
 
     while True:
         user_input = input('Please select a number between 1 - 4\n')
