@@ -53,7 +53,8 @@ def start_menu():
     print("3. Add a Hall of Famer's stats into the list \n")
     print('4. Exit \n')
     print(all_stats)
-     
+
+
     while True:
         user_input = input('Please select a number between 1 - 4\n')
         
@@ -80,23 +81,85 @@ def start_menu():
             if not player_found:
                 print("Player not found.")
         elif user_input == '3':
-            player_name = input("Enter the player's name: ")
-            induct_year = int(input("Enter the player's induction year: "))
-            games_played = int(input("Enter the player's total games played: "))
-            points = int(input("Enter the player's total points: "))
-            rebounds = int(input("Enter the player's total rebounds: "))
-            assists = int(input("Enter the player's total assists: "))
-            steals = int(input("Enter the player's total steals: "))
-            blocks = int(input("Enter the player's total blocks: "))
-            print("Adding a new Hall of Famer's stats to the list.")
+            new_row = get_player_stats()
 
-           
-
-            update_NBAStats_sheet([player_name, induct_year, games_played, points, rebounds, assists, steals, blocks])
+            update_NBAStats_sheet(new_row)
         elif user_input == '4':
             print("Exiting...")
             break
         else:
             print("Invalid input. Please enter a number between 1 and 4.")
+
+
+def get_validated_input(prompt, input_type=int, validation=lambda x: x >= 0, error_message="Invalid input. Please try again."):
+    while True:
+        try:
+            value = input_type(input(prompt).strip())
+            if validation(value):
+                return value
+            else:
+                print(error_message)
+        except ValueError:
+            print(error_message)
+
+def get_player_stats():
+    while True:
+        player_name = input("Enter the player's name: ").strip()
+        if player_name:
+            break
+        else:
+            print("Player's name cannot be empty. Please enter a valid name.")
+    
+    induct_year = get_validated_input(
+        "Enter the player's induction year: ",
+        int,
+        lambda x: 1900 <= x <= 2100,
+        "Please enter a valid induction year between 1900 and 2100."
+    )
+    
+    games_played = get_validated_input(
+        "Enter the player's total games played: ",
+        int,
+        lambda x: x >= 0,
+        "Games played cannot be negative. Please enter a valid number."
+    )
+
+    points = get_validated_input(
+        "Enter the player's total points: ",
+        int,
+        lambda x: x >= 0,
+        "Points cannot be negative. Please enter a valid number."
+    )
+
+    rebounds = get_validated_input(
+        "Enter the player's total rebounds: ",
+        int,
+        lambda x: x >= 0,
+        "Rebounds cannot be negative. Please enter a valid number."
+    )
+
+    assists = get_validated_input(
+        "Enter the player's total assists: ",
+        int,
+        lambda x: x >= 0,
+        "Assists cannot be negative. Please enter a valid number."
+    )
+
+    steals = get_validated_input(
+        "Enter the player's total steals: ",
+        int,
+        lambda x: x >= 0,
+        "Steals cannot be negative. Please enter a valid number."
+    )
+
+    blocks = get_validated_input(
+        "Enter the player's total blocks: ",
+        int,
+        lambda x: x >= 0,
+        "Blocks cannot be negative. Please enter a valid number."
+    )
+
+    return [player_name, induct_year, games_played, points, rebounds, assists, steals, blocks]
+
 
 start_menu()
