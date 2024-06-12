@@ -59,15 +59,25 @@ def start_menu():
         
         if user_input == '1':
             print("List of 20 Hall Of Fame Players and their career total stats:")
-            for i in range(1, 21):
-                print(f"Row {i}: {NBAStats.row_values(i)}")
+            headers = ["Player ID", "Name", "Induction Year", "Games Played", "Points", "Rebounds", "Assists", "Steals", "Blocks"]
+            print(f"{headers[0]:<10} {headers[1]:<20} {headers[2]:<15} {headers[3]:<15} {headers[4]:<10} {headers[5]:<10} {headers[6]:<10} {headers[7]:<10} {headers[8]:<10}")
+
+            for i in range(2, len(all_stats) + 1):
+                row = NBAStats.row_values(i)
+                print(f"{row[0]:<10} {row[1]:<20} {row[2]:<15} {row[3]:<15} {row[4]:<10} {row[5]:<10} {row[6]:<10} {row[7]:<10} {row[8]:<10}")
         elif user_input == '2':
-            Name = input("Enter the player's name: ")
-            for i in range(1, 21):
-                if NBAStats.row_values(i)[0] == Name:
-                    print(f"{Name}'s career stats: {NBAStats.row_values(i)}")
+            name = input("Enter the player's name: ").strip()
+            player_found = False
+            for i in range(2, len(all_stats) + 1):  
+                row = NBAStats.row_values(i)
+                if row[1].strip().lower() == name.lower(): 
+                    player_found = True
+                    print(f"\n{name}'s career stats:")
+                    headers = ["Player ID", "Name", "Induction Year", "Games Played", "Points", "Rebounds", "Assists", "Steals", "Blocks"]
+                    print(f"{headers[0]:<10} {headers[1]:<20} {headers[2]:<15} {headers[3]:<15} {headers[4]:<10} {headers[5]:<10} {headers[6]:<10} {headers[7]:<10} {headers[8]:<10}")
+                    print(f"{row[0]:<10} {row[1]:<20} {row[2]:<15} {row[3]:<15} {row[4]:<10} {row[5]:<10} {row[6]:<10} {row[7]:<10} {row[8]:<10}")
                     break
-            else:
+            if not player_found:
                 print("Player not found.")
         elif user_input == '3':
             player_name = input("Enter the player's name: ")
