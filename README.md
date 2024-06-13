@@ -84,12 +84,12 @@ This allows you to Exit the terminal and does not run the application.
 - Test: I ran through the applcation on a local terminal and on Heroku over 20 times.
 - Result: The applcation worked as anticipated with no errors.
 - Verdict: Test passed.
-
+</br>
 - Implementation: Check the input validation was working as expected.
 - Test: I ran through the applcation on a local terminal and on Heroku over 20 times.
 - Result: The validation worked well. There were no instamces when it was possible to enter an invalid input.
 - Verdict: Test passed.
-
+</br>
 - Implementation: Check the data being added to spreadsheet was working as expected.
 - Test: I ran through the applcation on a local terminal and on Heroku over 10 times.
 - Result: The data was being added with no errors.
