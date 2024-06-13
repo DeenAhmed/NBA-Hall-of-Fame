@@ -76,9 +76,9 @@ This allows you to Exit the terminal and does not run the application.
 
 ![Exit](assets/images/hof%20exit.png)
 
-### Testing
+## Testing
 
-## Functionality
+### Functionality
 
 - Implementation: I wanted to make sure the applcaiton performed as expected from start to finish.
 - Test: I ran through the applcation on a local terminal and on Heroku over 20 times.
@@ -95,7 +95,7 @@ This allows you to Exit the terminal and does not run the application.
 - Result: The data was being added with no errors.
 - Verdict: Test passed.
 
-## Validation
+### Validation
 
 I used [PEP8](https://pep8ci.herokuapp.com/) to validate the Python on this project with the only warnings for lines being too long. I got this down to being 1-2 character out for these.
 
