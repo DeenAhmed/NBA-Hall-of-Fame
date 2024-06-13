@@ -122,7 +122,7 @@ The project was deployed to Heroku using the below procedure:-
 5. Once the web portal shows the green tick to confirm the name is original select the relevant region. In my case, I chose Europe as I am in the UK.
 6. When happy with your choice of name and that the correct region is selected, click on the "Create app" button.
 7. This will bring you to the project "Deploy" tab. From here, navigate to the settings tab and scroll down to the "Config Vars" section.
-8. Click the button labelled "Reveal Config Vars" and enter the "key" as port, the "value" as 8000 and click the "add" button.
+8. Click the button labelled "Reveal Config Vars" and enter the "key" as CREDS, the "value" as the data from creds.json file and click the "add" button.
 9. Scroll down to the buildpacks section of the settings page and click the button labeled " add buildpack," select "Python," and click "Save Changes".
 10. Repeat step 11 but this time add "node.js" instead of python.
     - IMPORTANT The buildpacks must be in the correct order. If node.js is listed first under this section, you can click on python and drag it upwards to change it to the first buildpack in the list.
