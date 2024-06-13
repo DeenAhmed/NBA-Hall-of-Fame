@@ -108,9 +108,11 @@ I used [PEP8](https://pep8ci.herokuapp.com/) to validate the Python on this proj
 - Issue: When trying to run this locally gspread import would show an error
 - Fix:   Install pip3 and this resolved the issue
 
-- Issue: Whnen trying to retreive individual player stats terminal would show valid when entering correct name
+- Issue: When trying to retreive individual player stats terminal would show valid when entering correct name
 - Fix:   Within for loop range was set at 1 which was getting incorrect value, changed to 2 and this retreive correct value and presented data
 
+- Issue: On Heroku all text was now within the window
+- Fix:   Admended width of terminal to 120 and data shown fitting perfectly within terminal
 ### Deployment
 
 The project was deployed to Heroku using the below procedure:-
