@@ -118,7 +118,7 @@ The project was deployed to Heroku using the below procedure:-
 1. Log in to Heroku or create an account if required.
 2. Click the button labeled New from the dashboard in the top right corner, just below the header.
 3. From the drop-down menu select "Create new app".
-4. Enter a unique app name. I chose battleships-1977 for this project, for reasons stated above.
+4. Enter a unique app name. I chose nba-hall-of-fam for this project, for reasons stated above.
 5. Once the web portal shows the green tick to confirm the name is original select the relevant region. In my case, I chose Europe as I am in the UK.
 6. When happy with your choice of name and that the correct region is selected, click on the "Create app" button.
 7. This will bring you to the project "Deploy" tab. From here, navigate to the settings tab and scroll down to the "Config Vars" section.
