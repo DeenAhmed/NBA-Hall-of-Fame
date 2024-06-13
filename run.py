@@ -105,35 +105,35 @@ def get_player_stats():
         "Enter the player's total points: ",
         int,
         lambda x: x >= 0,
-        "Points cannot be negative. Please enter a valid number."
+        "Points cannot be negative and must be a number. Please enter a valid number."
     )
 
     rebounds = get_validated_input(
         "Enter the player's total rebounds: ",
         int,
         lambda x: x >= 0,
-        "Rebounds cannot be negative. Please enter a valid number."
+        "Rebounds cannot be negative and must be a number. Please enter a valid number."
     )
 
     assists = get_validated_input(
         "Enter the player's total assists: ",
         int,
         lambda x: x >= 0,
-        "Assists cannot be negative. Please enter a valid number."
+        "Assists cannot be negative and must be a number. Please enter a valid number."
     )
 
     steals = get_validated_input(
         "Enter the player's total steals: ",
         int,
         lambda x: x >= 0,
-        "Steals cannot be negative. Please enter a valid number."
+        "Steals cannot be negative and must be a number. Please enter a valid number."
     )
 
     blocks = get_validated_input(
         "Enter the player's total blocks: ",
         int,
         lambda x: x >= 0,
-        "Blocks cannot be negative. Please enter a valid number."
+        "Blocks cannot be negative and must be a number. Please enter a valid number."
     )
 
     return [player_name, induct_year, games_played, points, rebounds, assists, steals, blocks]
