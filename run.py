@@ -26,6 +26,8 @@ NBAStats = SHEET.worksheet('NBAStats')
 all_stats = NBAStats.get_all_values()
 
 # Function to update the 'NBAStats' worksheet with new stats
+
+
 def update_NBAStats_sheet(stats):
     number = len(all_stats) + 1
     stats.insert(0, number)
@@ -33,6 +35,8 @@ def update_NBAStats_sheet(stats):
     print("Player Stats added successfully!")
 
 # Function to display the start menu and handle user input
+
+
 def start_menu():
     print('Welcome to this NBA Hall Of Fame Statistics, where you can '
           'action the following: \n')
@@ -102,6 +106,8 @@ def start_menu():
             print("Invalid input. Please enter a number between 1 and 4.")
 
 # Function to get and validate user input
+
+
 def get_validated_input(prompt, input_type=int, validation=lambda x: x >= 0,
                         error_message="Invalid input. Please try again."):
     while True:
@@ -115,6 +121,8 @@ def get_validated_input(prompt, input_type=int, validation=lambda x: x >= 0,
             print(error_message)
 
 # Function to gather stats for a new player from user input
+
+
 def get_player_stats():
     while True:
         player_name = input("Enter the player's name: ").strip()
@@ -184,4 +192,6 @@ def get_player_stats():
             assists, steals, blocks]
 
 # Start the program by displaying the start menu
+
+
 start_menu()
