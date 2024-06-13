@@ -115,7 +115,8 @@ def get_player_stats():
         "Enter the player's total games played: ",
         int,
         lambda x: x >= 0,
-        "Games played cannot be negative. Please enter a valid number."
+        "Games played cannot be negative and must be a number. Please enter a "
+        "valid number."
     )
 
     points = get_validated_input(
